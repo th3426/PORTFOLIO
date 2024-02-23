@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mvc_example.mapper.BoardMapper">
+  <select id="getBoardList" resultType="java.util.HashMap">
+    SELECT * FROM mvc_board ORDER BY BINDEX DESC
+  </select>
+
+  <insert id="insert" parameterType="BoardVo">
+    INSERT INTO mvc_board(BINDEX, BTITLE, BCONTENT, BWRITER, BDATE)
+                  VALUES (index_seq.nextval, #{title}, #{content}, #{writer}, SYSDATE)
+  </insert>
+</mapper>

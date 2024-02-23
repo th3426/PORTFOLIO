@@ -9,8 +9,8 @@
 
   <typeAliases>
     <!--  설정 해줘야 Mapper 반환 시 BoardVo, UserVo 사용 가능  -->
-    <typeAlias type="com.test.model.vo.BoardVo" alias="BoardVo"/>
-    <typeAlias type="com.test.model.vo.UserVo" alias="UserVo"/>
+    <typeAlias type="com.mvc_example.model.vo.BoardVo" alias="BoardVo"/>
+    <typeAlias type="com.mvc_example.model.vo.UserVo" alias="UserVo"/>
   </typeAliases>
 
   <environments default="development">
