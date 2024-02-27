@@ -1,5 +1,6 @@
 package com.mvc_example.controller;
 
+import com.mvc_example.session.commonSessionManager;
 import com.mvc_example.model.dao.BoardDao;
 import java.io.IOException;
 import java.util.HashMap;
@@ -12,11 +13,16 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet({"/board"})
 public class BoardServlet extends HttpServlet {
-  public BoardServlet() {
+  protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    this.doPost(req, resp);
   }
   
-  protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    System.out.println("board Servlet doget");
+  @Override
+  protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    System.out.println("==== board Servlet ====");
+    
+    commonSessionManager commonSessionManager = new commonSessionManager();
+    commonSessionManager.getSessionUserId(req);
     
     BoardDao boardDao = new BoardDao();
     

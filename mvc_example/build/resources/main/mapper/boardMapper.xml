@@ -7,7 +7,7 @@
   </select>
 
   <insert id="insert" parameterType="BoardVo">
-    INSERT INTO mvc_board(BINDEX, BTITLE, BCONTENT, BWRITER, BDATE)
-                  VALUES (index_seq.nextval, #{title}, #{content}, #{writer}, SYSDATE)
+    INSERT INTO mvc_board BINDEX, BTITLE, BCONTENT, BWRITER, BDATE
+                  VALUES index_seq.nextval, #{title}, #{content}, #{writer}, SYSDATE
   </insert>
 </mapper>

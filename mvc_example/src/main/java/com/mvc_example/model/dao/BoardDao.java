@@ -9,10 +9,8 @@ import java.util.HashMap;
 import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
+
 public class BoardDao {
-  public BoardDao() {
-  }
-  
   public int insertBoard(BoardVo boardVo) throws SQLException, IOException {
     SqlSession session = mvcSqlSessionFactory.getInstance().openSession(true);
     BoardMapper boardMapper = session.getMapper(BoardMapper.class);

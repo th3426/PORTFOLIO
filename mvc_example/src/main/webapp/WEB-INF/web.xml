@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 
   <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>/view/home.jsp</welcome-file>
   </welcome-file-list>
 
 <!--  <filter>-->
@@ -50,4 +50,30 @@
     <url-pattern>/board</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>Write</servlet-name>
+    <servlet-class>com.mvc_example.controller.WriteServlet </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Write</servlet-name>
+    <url-pattern>/write</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>SignUp</servlet-name>
+    <servlet-class>com.mvc_example.controller.SignUpServlet </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SignUp</servlet-name>
+    <url-pattern>/signUp</url-pattern>
+  </servlet-mapping>
+
+  <!-- 세션 타임아웃 1분 설정 -->
+  <session-config>
+    <session-timeout>1</session-timeout>
+  </session-config>
+
+  <listener>
+    <listener-class>com.mvc_example.session.commonSessionListener</listener-class>
+  </listener>
 </web-app>

@@ -7,6 +7,6 @@
   </title>
 </head>
 <body>
-  바디바디
+  index jsp
 </body>
 </html>

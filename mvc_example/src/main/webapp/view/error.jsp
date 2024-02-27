@@ -8,6 +8,6 @@
   </title>
 </head>
 <body>
-  바디바디
+  ERROR JSP
 </body>
 </html>

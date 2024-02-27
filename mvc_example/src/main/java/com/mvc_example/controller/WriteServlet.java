@@ -15,23 +15,26 @@ import javax.servlet.http.HttpSession;
 
 public class WriteServlet extends HttpServlet {
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    System.out.println("write Servlet doget");
-    HttpSession session = req.getSession();
+    req.setCharacterEncoding("UTF-8");
+    
     String action = req.getParameter("action");
+    String index = req.getParameter("index");
     String page = null;
-    System.out.println("user id in write servlet : " + session.getAttribute("userId"));
+    
+    
+    
     if (action.equals("write")) {
       page = "/view/write.jsp";
-      this.page_forward(page, req, resp);
-    } else {
+      page_forward(page, req, resp);
+    }
+    else {
       page = "/view/error.jsp";
-      this.page_forward(page, req, resp);
+      page_forward(page, req, resp);
     }
   }
   
   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
     resp.setContentType("text/html; charset=UTF-8");
-    HttpSession session = req.getSession();
     
     String title = req.getParameter("title");
     String content = req.getParameter("content");
@@ -45,7 +48,11 @@ public class WriteServlet extends HttpServlet {
     boardVo.setTitle(title);
     boardVo.setContent(content);
     
-    boardVo.setWriter((String)session.getAttribute("userId"));
+    boardVo.setWriter(req.getParameter("userId"));
+    
+    if(boardVo.getWriter() == null || boardVo.getWriter() == ""){
+      System.out.println("세션 아이디 없음");
+    }
     
     try {
       System.out.println("vo title : " + boardVo.getTitle());
@@ -54,11 +61,11 @@ public class WriteServlet extends HttpServlet {
       
       if (boardDao.insertBoard(boardVo) == 1) {
         System.out.println("BOARD INSERT SUCCESS");
-        make_alert("湲� �옉�꽦 �꽦怨�", resp);
+        make_alert("작성이 완료되었습니다.", resp);
       }
       else {
         System.out.println("BOARD INSERT FAILED");
-        make_alert("湲� �옉�꽦 �떎�뙣", resp);
+        make_alert("작성에 실패했습니다.", resp);
       }
       
     } catch (SQLException var9) {
@@ -77,7 +84,7 @@ public class WriteServlet extends HttpServlet {
     
     PrintWriter out = response.getWriter();
     
-    if (message.contains("�꽦怨�")) {
+    if (message.contains("성공")) {
       out.println("<script>alert('" + message + "'); history.go(-2); history.go(); </script>");
     }
     else {

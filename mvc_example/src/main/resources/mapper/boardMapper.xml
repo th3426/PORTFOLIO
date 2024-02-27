@@ -7,7 +7,12 @@
   </select>
 
   <insert id="insert" parameterType="BoardVo">
-    INSERT INTO mvc_board(BINDEX, BTITLE, BCONTENT, BWRITER, BDATE)
-                  VALUES (index_seq.nextval, #{title}, #{content}, #{writer}, SYSDATE)
+    INSERT INTO mvc_board BINDEX, BTITLE, BCONTENT, BWRITER, BDATE
+                  VALUES index_seq.nextval, #{title}, #{content}, #{writer}, SYSDATE
   </insert>
+
+  <!-- index와 세션 아이디로 해당 게시물 작성자가 맞는지 비교용 select 쿼리 -->
+
+  <!-- index로 해당 게시물 삭제 쿼리 -->
+
 </mapper>
