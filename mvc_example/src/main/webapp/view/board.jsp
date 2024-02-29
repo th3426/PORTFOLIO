@@ -11,10 +11,10 @@
 
 <html>
 <head>
+  <meta charset="UTF-8">
   <style>
     th, td {padding:10px;}
   </style>
-  <meta charset="UTF-8">
   <title>
     연습
   </title>
@@ -35,7 +35,7 @@
     <% for(int i = 0; i < boardList.size(); i++) {%>
     <tr align="center">
       <td><%=boardList.get(i).get("BINDEX")%></td>
-      <td><a href="<%=request.getContextPath()%>/write?action=delete&index=<%=boardList.get(i).get("BINDEX")%>"</a> <%=boardList.get(i).get("BTITLE")%></td>
+      <td><a href="<%=request.getContextPath()%>/detail?action=view&index=<%=boardList.get(i).get("BINDEX")%>"</a> <%=boardList.get(i).get("BTITLE")%></td>
       <td><%=boardList.get(i).get("BCONTENT")%></td>
       <td><%=boardList.get(i).get("BWRITER")%></td>
       <td><%=boardList.get(i).get("BDATE")%></td>
@@ -43,7 +43,7 @@
     <% }%>
   </table><br>
 
-  <form action="write" method="post" name="">
+  <form action="board" method="post" name="request_write">
     <input type="submit" value="글쓰기" name="submit">
   </form>
   

@@ -12,12 +12,30 @@
 
   <h2>글쓰기</h2>
 
-  <h3><a href="<%=request.getContextPath()%>/doLogin">로그인</a></h3>
-
-  <h3><a href="<%=request.getContextPath()%>/home?action=signUp">회원가입</a></h3>
+  <form action="write" method="post" name="request_write">
+    <div align="center">
+      <table border="1" width="90%">
+        <tr bgcolor="lightgray">
+          <td colspan="2" align="center">글쓰기</a></td>
+        </tr>			
+        <tr>	
+          <td width="15%" align="center">제목</td>
+          <td><input type="text" name="title" tabindex="2" style="width: 100%;"></td>
+        </tr>
+        <tr>	
+          <td width="15%" align="center">내용</td>
+          <td><textarea name="content" tabindex="4" style="width: 100%;" rows="15"></textarea></td>
+        </tr>
+        <tr>	
+          <td colspan="2" align="center">
+             <input type="submit" value="제출">
+          </td>
+        </tr>
+      </table>
+    </div>
+  </form>
   
-  <h3><a href="<%=request.getContextPath()%>/board">게시판</a></h3>
-
+  
   <jsp:include page ="/view/tail.jsp" />
 </body>
 </html>

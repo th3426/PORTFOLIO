@@ -60,6 +60,15 @@
   </servlet-mapping>
 
   <servlet>
+    <servlet-name>DetailContent</servlet-name>
+    <servlet-class>com.mvc_example.controller.DetailContentServlet </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DetailContent</servlet-name>
+    <url-pattern>/detail</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
     <servlet-name>SignUp</servlet-name>
     <servlet-class>com.mvc_example.controller.SignUpServlet </servlet-class>
   </servlet>

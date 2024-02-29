@@ -12,26 +12,24 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/mapper/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/mapper/userMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/DoLoginServlet.class.uniqueId4" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc_example/controller/BoardServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc_example/controller/BoardServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc_example/controller/DoLoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc_example/controller/DoLoginServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc_example/controller/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc_example/controller/HomeServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc_example/controller/SignUpServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc_example/controller/SignUpServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc_example/controller/WriteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc_example/controller/WriteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc_example/mapper/BoardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc_example/mapper/BoardMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc_example/model/dao/BoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc_example/model/dao/BoardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc_example/model/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc_example/model/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc_example/model/mvcSqlSessionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc_example/model/mvcSqlSessionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc_example/session/commonSessionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc_example/session/commonSessionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc_example/session/commonSessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc_example/session/commonSessionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/boardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/boardMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/userMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatisConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatisConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/ojdbc11.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/board.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/board.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/write.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/write.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 public class SignUpServlet extends HttpServlet {
   @Override
   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    System.out.println("==== signUp Servlet ====");
+    System.out.println("==== signUpServlet : doPost ====");
     
     req.setCharacterEncoding("UTF-8");
     

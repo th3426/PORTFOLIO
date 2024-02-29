@@ -10,7 +10,7 @@ import java.util.EventListener;
 @WebListener
 public class commonSessionListener implements HttpSessionListener, HttpSessionAttributeListener {
   public commonSessionListener() {
-    System.out.println("session 리스너 생성자 호출");
+    System.out.println("=====> 세션 리스너 생성자 호출");
   }
   
   //  세션 생성, 소멸

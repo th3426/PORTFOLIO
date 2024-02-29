@@ -4,7 +4,6 @@ import com.mvc_example.session.commonSessionManager;
 import com.mvc_example.model.dao.UserDao;
 import com.mvc_example.model.vo.UserVo;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -24,12 +23,12 @@ public class DoLoginServlet extends HttpServlet {
   
   @Override
   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    System.out.println("==== doLogin Servlet (post) ====");
+    System.out.println("==== doLoginServlet : doGet ====");
     
     req.setCharacterEncoding("UTF-8");
     
     commonSessionManager commonSessionManager = new commonSessionManager();
-    commonSessionManager.getSessionUserId(req);
+    commonSessionManager.loggingSessionUserId(req);
     
     String userId = req.getParameter("userId");
     String userPw = req.getParameter("userPw");
@@ -66,6 +65,7 @@ public class DoLoginServlet extends HttpServlet {
   }
   
   protected void make_alert(String message, HttpServletResponse response) throws IOException {
+    System.out.println("==== doLoginServlet : doPost ====");
     response.setCharacterEncoding("UTF-8");
     response.setContentType("text/html; charset=UTF-8");
     

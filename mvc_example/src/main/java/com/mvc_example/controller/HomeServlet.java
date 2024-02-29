@@ -9,18 +9,18 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 @WebServlet({"/home"})
 public class HomeServlet extends HttpServlet {
   
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    System.out.println("==== homeServlet : doGet ====");
     String action = req.getParameter("action");
     String page = null;
     
     commonSessionManager commonSessionManager = new commonSessionManager();
     
-    commonSessionManager.getSessionUserId(req);
+    commonSessionManager.loggingSessionUserId(req);
     
     if (action == null) {
       System.out.println("go to home jsp");
@@ -28,23 +28,27 @@ public class HomeServlet extends HttpServlet {
     }
     else {
       if (action.equals("login")) {
-        System.out.println("go to login jsp");
+//        System.out.println("go to login jsp");
+        if(commonSessionManager.existSession(req)){
+          // 기존 로그인 한 세션이 있는 경우
+          
+        }
         page = "/view/login.jsp";
       }
       else if (action.equals("signUp")) {
-        System.out.println("go to signUp jsp");
+//        System.out.println("go to signUp jsp");
         page = "/view/signUp.jsp";
       }
       else if (action.equals("board")){
-        System.out.println("go to board jsp");
+//        System.out.println("go to board jsp");
         page = "/view/board.jsp";
       }
       else if(action.equals("logout")){
-        System.out.println("로그아웃 요청");
+//        System.out.println("로그아웃 요청");
         
         // 세션 삭제
         commonSessionManager.removeSession(req);
-        commonSessionManager.getSessionUserId(req);
+        commonSessionManager.loggingSessionUserId(req);
         
         page = "";
       }
@@ -59,6 +63,7 @@ public class HomeServlet extends HttpServlet {
   }
   
   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    System.out.println("==== homeServlet : doPost ====");
     super.doPost(req, resp);
   }
   

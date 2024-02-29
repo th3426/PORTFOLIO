@@ -41,7 +41,8 @@ public class UserDao {
     return ret;
   }
   
-  public int loginUser(UserVo userVo) throws IOException {
+  public int
+  loginUser(UserVo userVo) throws IOException {
     SqlSession session = mvcSqlSessionFactory.getInstance().openSession();
     UserMapper userMapper = session.getMapper(UserMapper.class);
     

@@ -20,9 +20,6 @@ public class mvcSqlSessionFactory {
       InputStream inputStream = Resources.getResourceAsStream(resource);
       singleton = (new SqlSessionFactoryBuilder()).build(inputStream);
     }
-    else {
-      System.out.println("sql session factory is exist");
-    }
     return singleton;
   }
 }

@@ -2,12 +2,35 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.mvc_example.mapper.BoardMapper">
+  <resultMap id="boardResultMap" type="BoardVo">
+    <result column="BINDEX" property="index"/>
+    <result column="BTITLE" property="title"/>
+    <result column="BCONTENT" property="content"/>
+    <result column="BWRITER" property="writer"/>
+    <result column="BDATE" property="date"/>
+  </resultMap>
+  
   <select id="getBoardList" resultType="java.util.HashMap">
     SELECT * FROM mvc_board ORDER BY BINDEX DESC
   </select>
 
   <insert id="insert" parameterType="BoardVo">
-    INSERT INTO mvc_board BINDEX, BTITLE, BCONTENT, BWRITER, BDATE
-                  VALUES index_seq.nextval, #{title}, #{content}, #{writer}, SYSDATE
+    INSERT INTO mvc_board (BINDEX, BTITLE, BCONTENT, BWRITER, BDATE)
+            VALUES (index_seq.nextval, #{title}, #{content}, #{writer}, SYSDATE)
   </insert>
+
+  <!-- index와 세션 아이디로 해당 게시물 작성자가 맞는지 비교용 select 쿼리 -->
+  <select id="searchByUserIdAndIndex" parameterType="BoardVo" resultType="java.lang.Boolean">
+    SELECT * FROM mvc_board WHERE BINDEX = ${index} AND BWRITER = ${writer}
+  </select>
+
+  <select id="searchByIndex" parameterType="String" resultMap="boardResultMap">
+      SELECT BINDEX, BTITLE, BCONTENT, BWRITER, BDATE FROM mvc_board WHERE BINDEX = ${index}
+  </select>
+
+  <!-- index로 해당 게시물 삭제 쿼리 -->
+  <delete id="delete" parameterType="String">
+    DELETE FROM mvc_board WHERE BINDEX = ${index}
+  </delete>
+
 </mapper>
